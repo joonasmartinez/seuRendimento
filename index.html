@@ -48,14 +48,39 @@
 
 <div class="col-4 m-auto">
   <span class="m-auto">Informe os dados</span>
-  <div class="form-floating mb-3 ">
-    <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Inicial</label>
-  </div>
-  
+    <form>
 
-  <button type="button" class="btn btn-dark mt-3">Calcular</button>
-</div> 
+      <div class="form-floating mb-3 ">
+        <input type="text" required class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Inicial</label>
+        <span>Valor que você tem para iniciar.</span>
+      </div>
+
+      <div class="form-floating mb-3 ">
+        <input type="text" required class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Mensal</label>
+        <span>A partir do mês seguinte você irá depositar constantemente este valor.</span>
+      </div>
+
+      <div class="form-floating mb-3 ">
+        <input type="text" required class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Juros anual</label>
+        <span>Valor do juros anual pago por seu investimento.</span>
+      </div>
+
+      <div class="form-floating mb-3 ">
+        <input type="text" required class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Juros anual</label>
+        <span>Período de permanencia com este investimento sem retirar nada.</span>
+      </div>
+    
+  
+    <button type="submit" class="btn btn-dark mt-3">Calcular</button>
+  </div>
+
+
+    </form>
+   
 
       
 
