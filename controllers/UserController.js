@@ -35,9 +35,11 @@ class UserController{
 
    }
 
-   generateInfoTable(mes, rendimento, acumulado, porcentagem){
+   generateInfoTable(){
 
-    let tr = document.createElement("tr")
+    let tr = document.createElement("tr");
+
+    this.calc(periodo)
 
     tr.innerHTML = `
     <tr >
@@ -45,13 +47,11 @@ class UserController{
       <td>${rendimento}</td>
       <td>${acumulado}</td>
       <td>${porcentagem}</td>
-    </tr>`
-    console.log(tr)
-  return tr;
-   }
+    </tr>`;
 
-   calc(){
-       
+    console.log(tr);
+
+    return tr;
    }
 
 }
