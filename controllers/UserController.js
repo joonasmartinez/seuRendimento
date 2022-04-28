@@ -1,13 +1,22 @@
 class UserController{
 
-   constructor(valorInicial, valorMensal, valorJuros, valorPeriodo, tableCalc){
+   constructor(){
        
-    this.valorInicial = document.getElementById(valorInicial)
-    this.valorMensal = document.getElementById(valorMensal)
-    this.valorJuros = document.getElementById(valorJuros)
-    this.valorPeriodo = document.getElementById(valorPeriodo)
-    this.tableCalc = document.getElementById(tableCalc)
+    this.valorInicial;
+    this.valorMensal;
+    this.valorJuros;
+    this.valorPeriodo;
+    this.tableCalc = document.getElementById("tableCalc");
 
+
+   }
+
+   getValues(){
+
+    this.valorInicial = document.getElementById("valorInicial").value
+    this.valorMensal = document.getElementById("valorMensal").value
+    this.valorJuros = document.getElementById("valorJuros").value
+    this.valorPeriodo = document.getElementById("valorPeriodo").value
 
    }
 
@@ -29,24 +38,35 @@ class UserController{
 
     this.tableCalc.appendChild(table)
 
-    let tr = this.generateInfoTable();
-
-    table.createTBody().appendChild(tr);
+    this.generateInfoTable(table);
 
    }
 
-   generateInfoTable(){
+   generateInfoTable(table){
 
     let tr = document.createElement("tr");
 
+    this.getValues();
 
-    tr.innerHTML = `
-    <tr >
-      <th scope="row" >${mes}</th>
-      <td>${rendimento}</td>
-      <td>${acumulado}</td>
-      <td>${porcentagem}</td>
-    </tr>`;
+    let calc = new Calc(this.valorInicial, this.valorMensal, this.valorJuros);
+
+    for(let a=0; a<= this.valorPeriodo.value; a++){
+
+
+        tr.innerHTML = `
+                <tr >
+                <th scope="row" >${a+1}</th>
+                <td>${calc.rendeu}</td>
+                <td>${calc.montante}</td>
+                <td>${porcentagem}</td>
+                </tr>`;
+
+
+
+    }
+
+
+    table.createTBody().appendChild(tr);
 
     console.log(tr);
 
