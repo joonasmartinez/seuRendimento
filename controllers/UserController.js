@@ -24,7 +24,7 @@ class UserController{
 
     let table = document.createElement("table");
 
-    table.className = "table table table-striped table-hover";
+    table.className = "table table table-striped table-hover table-bordered";
     table.id = "table-info";
 
     table.innerHTML = `
