@@ -25,6 +25,7 @@ class UserController{
     let table = document.createElement("table");
 
     table.className = "table table table-striped table-hover";
+    table.id = "table-info";
 
     table.innerHTML = `
     <thead>
@@ -34,43 +35,41 @@ class UserController{
         <th scope="col">Acumulado</th>
         <th scope="col">Porcentagem de rendimento</th>
       </tr>
-    </thead>`
+    </thead>
+    <tbody id="table-info-tbody">
+
+    </tbody>`
 
     this.tableCalc.appendChild(table)
 
-    this.generateInfoTable(table);
+    this.generateInfoTable();
 
    }
 
-   generateInfoTable(table){
-
-    let tr = document.createElement("tr");
+   generateInfoTable(){
 
     this.getValues();
 
+    let table = document.getElementById("table-info-tbody");
+
     let calc = new Calc(this.valorInicial, this.valorMensal, this.valorJuros);
 
-    for(let a=0; a<= this.valorPeriodo.value; a++){
+    for(let a=0; a < 12; a++){
 
+        let tr = document.createElement("tr");
 
         tr.innerHTML = `
                 <tr >
                 <th scope="row" >${a+1}</th>
-                <td>${calc.rendeu}</td>
-                <td>${calc.montante}</td>
-                <td>${porcentagem}</td>
+                <td>${a}</td>
+                <td>${a}</td>
+                <td>${0}</td>
                 </tr>`;
 
-
+                table.appendChild(tr);
 
     }
 
-
-    table.createTBody().appendChild(tr);
-
-    console.log(tr);
-
-    return tr;
    }
 
 }
