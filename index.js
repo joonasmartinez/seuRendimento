@@ -1,1 +1,1 @@
-let userController = new UserController("valorInicial", "valorMensal", "valorJuros", "valorPeriodo");
+let userController = new UserController("valorInicial", "valorMensal", "valorJuros", "valorPeriodo", "tableCalc");
