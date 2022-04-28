@@ -2,11 +2,11 @@ class Calc{
 
     constructor(inicial, mensal, jurosAnual, periodo){
 
-        this._inicial = inicial;
-        this._mensal = mensal;
-        this._jurosAnual = jurosAnual;
-        this._periodo = periodo;
-        this._montante;
+        this._inicial = parseFloat(inicial);
+        this._mensal = parseFloat(mensal);
+        this._jurosAnual = parseFloat(jurosAnual);
+        this._periodo = parseInt(periodo);
+        this._montante = parseFloat(inicial);
 
     }
 
@@ -32,7 +32,8 @@ class Calc{
 
     doCalc(){
 
-
+        let rendeu = this.montante + (this.montante*(this.jurosAnual/12))
+        console.log(rendeu, this.montante, this.jurosAnual)
 
     }
 

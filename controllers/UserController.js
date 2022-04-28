@@ -39,7 +39,6 @@ class UserController{
 
     let tr = document.createElement("tr");
 
-    this.calc(periodo)
 
     tr.innerHTML = `
     <tr >
