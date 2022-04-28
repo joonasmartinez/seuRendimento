@@ -23,34 +23,35 @@
 
 <div class="col-4 m-auto">
   <p class="text-center fs-4">Informe os dados</p>
-    <form>
+    <form id="formCalc">
 
       <div class="form-floating mb-3 ">
-        <input type="text" id="valorInicial" required class="form-control" id="floatingInput" placeholder="R$5.000,00" value="5000">
+        <input type="text" id="valorInicial" required class="form-control" id="floatingInput" placeholder="R$5.000,00" value="">
         <label for="floatingInput">Inicial</label>
         <span>Valor que você tem para iniciar.</span>
       </div>
 
       <div class="form-floating mb-3 ">
-        <input type="text" id="valorMensal" required class="form-control" id="floatingInput" placeholder="R$200,00" value="200">
+        <input type="text" id="valorMensal" required class="form-control" id="floatingInput" placeholder="R$200,00" value="">
         <label for="floatingInput">Mensal</label>
         <span>A partir do mês seguinte você irá depositar constantemente este valor.</span>
       </div>
 
       <div class="form-floating mb-3 ">
-        <input type="text" id="valorJuros" required class="form-control" id="floatingInput" placeholder="14%" value="12">
+        <input type="text" id="valorJuros" required class="form-control" id="floatingInput" placeholder="14%" value="">
         <label for="floatingInput">Juros anual</label>
         <span>Valor do juros anual pago por seu investimento.</span>
       </div>
 
       <div class="form-floating mb-3 ">
-        <input type="text" id="valorPeriodo" required class="form-control" id="floatingInput" placeholder="60" value="30">
+        <input type="text" id="valorPeriodo" required class="form-control" id="floatingInput" placeholder="60" value="">
         <label for="floatingInput">Período</label>
         <span>Período em MESES de permanencia com este investimento sem retirar nada.</span>
       </div>
     
   
     <button type="submit" class="btn btn-dark mt-3">Calcular</button>
+    <button type="button" id="btn-reset" class="btn btn-primary mt-3">Resetar</button>
   </div>
 
 
