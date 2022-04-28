@@ -120,10 +120,10 @@ class UserController{
         tr.innerHTML = `
                 <tr >
                 <th scope="row" >${a+1}</th>
-                <td>R$ ${calc.rendeu.toFixed(2).replace(".",",")}</td>
-                <td>R$ ${calc.montante.toFixed(2).replace(".",",")}</td>
-                <td>${calc.porcentagemRendimento.toFixed(2).replace(".",",")}%</td>
-                <td>R$ ${calc._totalRendimento.toFixed(2).replace(".",",")}</td>
+                <td>${calc.rendeu.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+                <td>${calc.montante.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+                <td>${calc.porcentagemRendimento.toFixed(3).replace(".",",")}%</td>
+                <td>${calc._totalRendimento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
                 </tr>`;
 
                 calc.doCalc();

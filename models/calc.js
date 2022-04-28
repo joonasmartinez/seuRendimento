@@ -48,7 +48,7 @@ class Calc{
 
         let rendeu = (this.montante*((this.jurosAnual/12)/100))
         this._rendeu = rendeu;
-        this.montante = (this.montante+this.rendeu) + this.mensal;
+        this.montante = (this.montante+rendeu) + this.mensal;
         this.porcentagemRendimento = ((this.montante/this.inicial)-1)*100;
         this._totalRendimento += rendeu;
 
