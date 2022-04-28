@@ -31,9 +31,10 @@ class UserController{
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Rendimento</th>
+        <th scope="col">Rendimento do mês</th>
         <th scope="col">Acumulado</th>
         <th scope="col">Porcentagem de rendimento</th>
+        <th scope="col">Rendimento total</th>
       </tr>
     </thead>
     <tbody id="table-info-tbody">
@@ -54,7 +55,7 @@ class UserController{
 
     let calc = new Calc(this.valorInicial, this.valorMensal, this.valorJuros);
 
-    for(let a=0; a < 360; a++){
+    for(let a=0; a < 60; a++){
 
         let tr = document.createElement("tr");
 
@@ -64,6 +65,7 @@ class UserController{
                 <td>R$ ${calc.rendeu.toFixed()}</td>
                 <td>R$ ${calc.montante.toFixed()}</td>
                 <td>${calc.porcentagemRendimento.toFixed()}%</td>
+                <td>R$ ${calc._totalRendimento.toFixed()}</td>
                 </tr>`;
 
                 calc.doCalc();

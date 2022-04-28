@@ -8,6 +8,7 @@ class Calc{
         this._montante = parseFloat(inicial);
         this._rendeu=0;
         this._porcentagemRendimento=0;
+        this._totalRendimento=0;
 
     }
 
@@ -49,6 +50,7 @@ class Calc{
         this._rendeu = rendeu;
         this.montante = (this.montante+this.rendeu) + this.mensal;
         this.porcentagemRendimento = ((this.montante/this.inicial)-1)*100;
+        this._totalRendimento += rendeu;
 
     }
 
