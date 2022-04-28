@@ -6,8 +6,8 @@ class Calc{
         this._mensal = parseFloat(mensal);
         this._jurosAnual = parseFloat(jurosAnual);
         this._montante = parseFloat(inicial);
-        this._rendeu;
-        this._porcentagemRendimento;
+        this._rendeu=0;
+        this._porcentagemRendimento=0;
 
     }
 
@@ -35,12 +35,20 @@ class Calc{
         return this._porcentagemRendimento;
     }
 
+    set montante(value){
+        this._montante = value;
+    }
+
+    set porcentagemRendimento(value){
+        this._porcentagemRendimento = value;
+    }
+
     doCalc(){
 
-        let rendeu = (this.montante*((this.jurosAnual/12)/100))-montante
-        this.rendeu = rendeu;
-        montante += rendeu;
-        porcentagemRendimento;
+        let rendeu = (this.montante*((this.jurosAnual/12)/100))
+        this._rendeu = rendeu;
+        this.montante = (this.montante+this.rendeu) + this.mensal;
+        this.porcentagemRendimento = ((this.montante/this.inicial)-1)*100;
 
     }
 

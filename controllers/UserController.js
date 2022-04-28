@@ -54,17 +54,19 @@ class UserController{
 
     let calc = new Calc(this.valorInicial, this.valorMensal, this.valorJuros);
 
-    for(let a=0; a < 12; a++){
+    for(let a=0; a < 360; a++){
 
         let tr = document.createElement("tr");
 
         tr.innerHTML = `
                 <tr >
                 <th scope="row" >${a+1}</th>
-                <td>${a}</td>
-                <td>${a}</td>
-                <td>${0}</td>
+                <td>R$ ${calc.rendeu.toFixed()}</td>
+                <td>R$ ${calc.montante.toFixed()}</td>
+                <td>${calc.porcentagemRendimento.toFixed()}%</td>
                 </tr>`;
+
+                calc.doCalc();
 
                 table.appendChild(tr);
 
