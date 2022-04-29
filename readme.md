@@ -51,7 +51,7 @@ Já a coluna 'Rendimento total' calcula quanto de rendimento você já gerou at�
   
 ## Tecnologias utilizadas
 
-Toda a parte visual do site (front-end) foi desenvolvida utilizando o Framework BOOTSTRAP 5.0; Já o (Back-end) foi desenvolvido em JavaScript sob o paradigma Orientado à Objetos.
+Toda a parte visual do site (front-end) foi desenvolvida utilizando o Framework BOOTSTRAP 5.0 aliado ao JavaScript sob o paradigma Orientado à Objetos.
 
 ## Contato
 
